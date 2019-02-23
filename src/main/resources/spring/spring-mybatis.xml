@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/cache http://www.springframework.org/schema/cache/spring-cache.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <context:component-scan base-package="com.ybq.mapper">
+        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+    </context:component-scan>
+
+    <context:property-placeholder location="classpath:db.properties"/>
+    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+        <property name="driverClass" value="${jdbc.driver}"/>
+        <property name="jdbcUrl" value="${jdbc.url}"/>
+        <property name="user" value="${jdbc.username}"/>
+        <property name="password" value="${jdbc.password}"/>
+
+        <!--c3p0连接池-->
+        <property name="maxPoolSize" value="30"/>
+        <property name="minPoolSize" value="10"/>
+        <!--关闭之后不自动commit-->
+        <property name="autoCommitOnClose" value="false"/>
+        <!--超时时间-->
+        <property name="checkoutTimeout" value="100000"/>
+        <!--连接失败，重试次数-->
+        <property name="acquireRetryAttempts" value="2"/>
+    </bean>
+
+    <!--最后一步，整合ssm-->
+    <bean id="sqlSessionFactoryBean" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <!--数据源-->
+        <property name="dataSource" ref="dataSource"/>
+        <!--引入mapper映射文件-->
+        <property name="mapperLocations" value="classpath:com/ybq/mapper/**/*.xml"/>
+
+        <property name="configuration">
+            <bean class="org.apache.ibatis.session.Configuration">
+                <!--驼峰命名,其他mybatis配置也在这里-->
+                <property name="mapUnderscoreToCamelCase" value="true"/>
+            </bean>
+        </property>
+        <!--插件配置-->
+        <property name="plugins">
+            <array>
+                <!--拦截器实现分页-->
+                <bean class="com.github.pagehelper.PageInterceptor">
+                    <property name="properties">
+                        <value>
+                            helperDialect=mysql
+                            reasonable=true
+                            supportMethodsArguments=true
+                            params=count=countSql
+                            autoRuntimeDialect=true
+                        </value>
+                    </property>
+                </bean>
+            </array>
+        </property>
+    </bean>
+
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="com.sz.mapper"/>
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactoryBean"/>
+    </bean>
+
+    <bean id="transactionManager"
+          class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+            <property name="dataSource" ref="dataSource"/>
+    </bean>
+    <!--确定事务的策略-->
+    <tx:advice transaction-manager="transactionManager" id="transactionAdvice">
+        <tx:attributes>
+            <tx:method name="select*" read-only="true"/>
+            <tx:method name="get*" read-only="true"/>
+            <tx:method name="query*" read-only="true"/>
+            <!--数据修改行为，开启回滚-->
+            <tx:method name="delete*" propagation="REQUIRED"
+                            rollback-for="Exception"/>
+            <tx:method name="update*" propagation="REQUIRED"
+                            rollback-for="Exception"/>
+            <tx:method name="insert*" propagation="REQUIRED"
+                            rollback-for="Exception"/>
+            <tx:method name="add*" propagation="REQUIRED"
+                            rollback-for="Exception"/>
+        </tx:attributes>
+    </tx:advice>
+
+    <!--注解事务配置-->
+    <tx:annotation-driven transaction-manager="transactionManager"/>
+
+    <aop:config>
+        <aop:pointcut id="" expression="execution(* com.ybq.service..*.*(..))"/>
+        <!--<aop:advisor advice-ref="transactionAdvice" pointcut-ref="txCut"/>-->
+    </aop:config>
+
+</beans>
