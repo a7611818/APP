@@ -15,7 +15,9 @@
 
     <div class="layui-body">
         <!-- 内容主体区域 -->
-
+        <div style="padding: 15px;">
+            ${sessionScope.devUser.devName}您好
+        </div>
     </div>
 
     <%@include file="/comment/foot.jsp" %>

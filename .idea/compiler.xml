@@ -9,8 +9,8 @@
         <module name="AppManagerSystem" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="AppManagerSystem" target="1.5" />
+    <bytecodeTargetLevel target="8">
+      <module name="AppManagerSystem" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>

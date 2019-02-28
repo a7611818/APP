@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ybq.mapper.AppCategoryMapper">
+    <select id="queryAllLevel1" resultType="com.ybq.pojo.AppCategory">
+      select id,category_code,category_name
+       from appinfodb.app_category
+       where parent_Id IS NULL
+    </select>
+    <select id="queryLevelByParentId" resultType="com.ybq.pojo.AppCategory">
+        select id,category_code,category_name
+         from appinfodb.app_category
+         where parent_id = #{id}
+    </select>
+
+</mapper>
