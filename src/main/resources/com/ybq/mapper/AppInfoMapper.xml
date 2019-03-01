@@ -337,7 +337,7 @@
     </delete>
 
     <select id="query" resultMap="appInfoDetail">
-        SELECT t1.id appInfoId,t1.software_name,t1.apk_name,t1.software_size,t1.downloads,
+        SELECT distinct t1.id appInfoId,t1.software_name,t1.apk_name,t1.software_size,t1.downloads,
         t2.value_name AS flatform_name,
         t6.value_name AS app_status,
         t3.category_name AS category_level_one_name,
