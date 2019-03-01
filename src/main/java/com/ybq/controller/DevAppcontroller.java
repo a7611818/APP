@@ -130,4 +130,11 @@ public class DevAppcontroller {
         boolean row = appInfoService.update(appInfo);
         return "redirect:/app/query";
     }
+
+    @RequestMapping("/queryById/{id}")
+    public String queryById(@PathVariable("id")Long id , Model model){
+        AppInfo app = appInfoService.queryDetailById(id);
+        model.addAttribute("app",app);
+        return "app/appDetail";
+    }
 }

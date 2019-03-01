@@ -23,4 +23,6 @@ public interface AppInfoService {
     AppInfo queryById(Long id);
 
     boolean update(AppInfo appInfo);
+
+    AppInfo queryDetailById(Long id);
 }

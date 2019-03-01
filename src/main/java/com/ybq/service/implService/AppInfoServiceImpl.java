@@ -92,4 +92,9 @@ public class AppInfoServiceImpl implements AppInfoService {
         return row == 1;
     }
 
+    @Override
+    public AppInfo queryDetailById(Long id) {
+        return appInfoMapper.queryDetailById(id);
+    }
+
 }

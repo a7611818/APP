@@ -134,7 +134,6 @@
                         <a href="${ctx}/app/toEdit/${obj.id}" class="layui-btn layui-btn-normal"><i class="layui-icon">&#xe642;</i></a>
                         <a href="${ctx}/app/queryById/${obj.id}" class="layui-btn"><i class="layui-icon">&#xe615;</i></a>
                         <a href="${ctx}/app/delete/${obj.id}" class="layui-btn layui-btn-danger"><i class="layui-icon">&#xe640;</i></a>
-                        ${obj.id}
                     </td>
 
                 </tr>

@@ -7,53 +7,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bfc9afcc-4858-4d98-87fc-dcf61420696e" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ybq/constant/CommonCodeConstant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ybq/controller/AppCategoryController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ybq/controller/DevAppcontroller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ybq/controller/DevUserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ybq/dto/AppInfoDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ybq/mapper/AppCategoryMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ybq/mapper/AppInfoMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ybq/mapper/DevUserMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ybq/service/AppCategoryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ybq/service/AppInfoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ybq/service/DevUserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ybq/service/implService/AppCategoryServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ybq/service/implService/AppInfoServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ybq/service/implService/DevUserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/ybq/mapper/AppCategoryMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/ybq/mapper/AppInfoMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/ybq/mapper/DataDictionaryMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/ybq/mapper/DevUserMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/comment/foot.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/comment/head.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/comment/left.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/app/add.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/app/edit.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/app/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/dev/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/dev/login.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/ybq/Test001.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/AppManagerSystem.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/96137363-b966-47a9-be90-0d087d51f20c.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/springmvc02.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ybq/mapper/Dev_userMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ybq/pojo/Dev_user.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ybq/servlet/WebPathInitServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ybq/servlet/WebPathInitServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/ybq/mapper/Dev_userMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/generatorConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/generatorConfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/spring/spring-mybatis.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spring/spring-mybatis.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/spring/spring-servlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spring/spring-servlet.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/springmvc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/template.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/template.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/app/appDetail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ybq/controller/DevAppcontroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ybq/controller/DevAppcontroller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ybq/mapper/AppInfoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ybq/mapper/AppInfoMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ybq/service/AppInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ybq/service/AppInfoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ybq/service/implService/AppInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ybq/service/implService/AppInfoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/ybq/mapper/AppInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/ybq/mapper/AppInfoMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/app/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/app/index.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -95,29 +56,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="AppInfoMapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/com/ybq/mapper/AppInfoMapper.xml">
+      <file leaf-file-name="appDetail.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/app/appDetail.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="364" lean-forward="true" selection-start-line="364" selection-end-line="364" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="console_4.sql" pinned="false" current-in-tab="true">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/4e4bc01a-d68a-4658-b0d7-4dcdf22ca89e/console_4.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="341" selection-end-column="341" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="console_3.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/4e4bc01a-d68a-4658-b0d7-4dcdf22ca89e/console_3.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
-              <caret line="25" selection-start-line="25" selection-end-line="25" />
+            <state relative-caret-position="163">
+              <caret line="84" column="19" selection-start-line="84" selection-start-column="19" selection-end-line="84" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -126,19 +69,9 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>APP</find>
-      <find>appInfoDetail</find>
-      <find>level2Id</find>
-      <find>level1Name</find>
-      <find>level2Name</find>
-      <find>level3Name</find>
-      <find>createName</find>
-      <find>software_size</find>
-      <find>app_info</find>
       <find>appId</find>
       <find>u3</find>
       <find>devName</find>
-      <find>appSingleDetail</find>
       <find>modify_by</find>
       <find>sta</find>
       <find>APP状态</find>
@@ -154,6 +87,18 @@
       <find>dev_id</find>
       <find>LIMIT</find>
       <find>flat</find>
+      <find>form</find>
+      <find>t6.type_Code = 'APP_STATUS</find>
+      <find>appSingleDetail</find>
+      <find>index</find>
+      <find>-&gt;</find>
+      <find>appInfoDetail</find>
+      <find>操作</find>
+      <find>categoryName</find>
+      <find>category_level_one_name</find>
+      <find>v3.app_id</find>
+      <find>v3v2</find>
+      <find>forea</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -162,16 +107,20 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/jsp/app/index.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ybq/service/AppInfoService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ybq/mapper/AppInfoMapper.java" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/4e4bc01a-d68a-4658-b0d7-4dcdf22ca89e/console_1.sql" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ybq/service/implService/AppInfoServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/app/edit.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ybq/controller/DevAppcontroller.java" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/4e4bc01a-d68a-4658-b0d7-4dcdf22ca89e/console_3.sql" />
-        <option value="$PROJECT_DIR$/src/main/resources/com/ybq/mapper/AppInfoMapper.xml" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/4e4bc01a-d68a-4658-b0d7-4dcdf22ca89e/console_4.sql" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ybq/controller/AppCategoryController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ybq/service/AppInfoService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ybq/service/implService/AppInfoServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ybq/mapper/AppInfoMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ybq/controller/DevAppcontroller.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/app/index.jsp" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/4e4bc01a-d68a-4658-b0d7-4dcdf22ca89e/console_5.sql" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/4e4bc01a-d68a-4658-b0d7-4dcdf22ca89e/console_6.sql" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/ybq/mapper/AppInfoMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/app/appDetail.jsp" />
       </list>
     </option>
   </component>
@@ -218,6 +167,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -265,8 +217,14 @@
               <item name="AppManagerSystem" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="ybq" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AppManagerSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AppManagerSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="mapper" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -274,36 +232,29 @@
               <item name="AppManagerSystem" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="ybq" type="462c0819:PsiDirectoryNode" />
-              <item name="pojo" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="AppManagerSystem" type="b2602c69:ProjectViewProjectNode" />
               <item name="AppManagerSystem" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="ybq" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="jsp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="AppManagerSystem" type="b2602c69:ProjectViewProjectNode" />
               <item name="AppManagerSystem" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="ybq" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="implService" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="jsp" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -317,6 +268,11 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="project.propDebugger" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\me\java\java code\AppManagerSystem\src\main\webapp\jsp\app" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -455,16 +411,24 @@
       <updated>1551278893146</updated>
       <workItem from="1551278894637" duration="170000" />
       <workItem from="1551279070722" duration="6074000" />
-      <workItem from="1551356837110" duration="8397000" />
+      <workItem from="1551356837110" duration="13200000" />
+      <workItem from="1551458288984" duration="1216000" />
     </task>
+    <task id="LOCAL-00001" summary="haha">
+      <created>1551366220295</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1551366220295</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14641000" />
+    <option name="totallyTimeSpent" value="20660000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="11" />
       <window_info anchor="bottom" id="Event Log" order="14" side_tool="true" />
@@ -490,7 +454,7 @@
       <window_info anchor="bottom" id="Run" order="5" />
       <window_info anchor="bottom" id="Spring" order="0" weight="0.3293944" />
       <window_info anchor="bottom" id="Terminal" order="11" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.2533512" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.25670242" />
       <window_info anchor="right" id="Bean Validation" order="2" />
       <window_info id="Web" order="0" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="10" />
@@ -509,12 +473,23 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="haha" />
+    <option name="LAST_COMMIT_MESSAGE" value="haha" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="3" />
+      <option name="time" value="10" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/app/appDetail.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2520">
+          <caret line="84" column="19" selection-start-line="84" selection-start-column="19" selection-end-line="84" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/app/edit.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4380">
@@ -548,13 +523,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="21" column="18" lean-forward="true" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ybq/controller/AppCategoryController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -595,16 +563,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/app/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="267" selection-start-line="267" selection-end-line="316" selection-end-column="10" />
-          <folding>
-            <element signature="e#10006#12119#0#HTML" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ybq/pojo/AppInfo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="199">
@@ -633,21 +591,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ybq/dto/AppInfoDTO.java">
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/4e4bc01a-d68a-4658-b0d7-4dcdf22ca89e/console_2.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/4e4bc01a-d68a-4658-b0d7-4dcdf22ca89e/console_4.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-210">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        <state>
+          <caret column="255" lean-forward="true" selection-start-column="255" selection-end-column="255" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ybq/service/implService/AppInfoServiceImpl.java">
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/4e4bc01a-d68a-4658-b0d7-4dcdf22ca89e/console_3.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="32" column="40" selection-start-line="32" selection-start-column="40" selection-end-line="32" selection-end-column="40" />
-          <folding>
-            <element signature="e#2444#2445#0" expanded="true" />
-            <element signature="e#2494#2495#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="385">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ybq/controller/AppCategoryController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="447">
+          <caret line="34" column="3" selection-start-line="34" selection-start-column="3" selection-end-line="34" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1223">
+          <caret line="110" column="19" selection-start-line="110" selection-start-column="19" selection-end-line="110" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ybq/controller/DevAppcontroller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="37" column="41" selection-start-line="37" selection-start-column="41" selection-end-line="37" selection-end-column="41" />
         </state>
       </provider>
     </entry>
@@ -658,41 +636,66 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ybq/service/implService/AppInfoServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="32" column="41" lean-forward="true" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ybq/dto/AppInfoDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="10" column="25" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ybq/pojo/AppCategory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="10" column="31" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/4e4bc01a-d68a-4658-b0d7-4dcdf22ca89e/console_5.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="1" column="359" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ybq/mapper/AppInfoMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="10" column="19" lean-forward="true" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+        <state relative-caret-position="180">
+          <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ybq/controller/DevAppcontroller.java">
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/4e4bc01a-d68a-4658-b0d7-4dcdf22ca89e/console_6.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2433">
-          <caret line="37" column="42" selection-start-line="37" selection-start-column="42" selection-end-line="37" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/4e4bc01a-d68a-4658-b0d7-4dcdf22ca89e/console_2.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/4e4bc01a-d68a-4658-b0d7-4dcdf22ca89e/console_3.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        <state relative-caret-position="278">
+          <caret line="22" column="47" selection-start-line="22" selection-start-column="47" selection-end-line="22" selection-end-column="47" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/com/ybq/mapper/AppInfoMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="364" lean-forward="true" selection-start-line="364" selection-end-line="364" />
+        <state relative-caret-position="1590">
+          <caret line="156" column="17" lean-forward="true" selection-start-line="156" selection-start-column="17" selection-end-line="156" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/4e4bc01a-d68a-4658-b0d7-4dcdf22ca89e/console_4.sql">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/app/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="341" selection-end-column="341" />
+        <state relative-caret-position="199">
+          <caret line="42" column="32" selection-start-line="42" selection-start-column="27" selection-end-line="42" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/app/appDetail.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="84" column="19" selection-start-line="84" selection-start-column="19" selection-end-line="84" selection-end-column="19" />
         </state>
       </provider>
     </entry>

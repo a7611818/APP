@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.ybq.mapper.AppInfoMapper">
-    
+
     <resultMap id="base" type="com.ybq.pojo.AppInfo">
         <id property="id" column="appInfoId"/>
         <result property="apkName" column="apk_name"/>
@@ -69,29 +69,20 @@
         </association>
 
     </resultMap>
+    
+    <resultMap id="appDetailWithHistoryVersion" type="com.ybq.pojo.AppInfo" extends="appSingleDetail">
+        <!--历史版本信息-->
+        <collection property="appVersions" ofType="com.ybq.pojo.AppVersion">
+            <id property="id" column="historyVersionId"/>
+            <result column="historyVersionNo" property="versionNo"/>
+            <result column="historyApkFileName" property="apkFilename"/>
+            <result column="historyApkLocPath" property="apkLocPath"/>
+            <result column="historyDownloadLink" property="downloadLink"/>
+            <result column="historyVersionSize" property="versionSize"/>
+            <result column="versionInfo" property="versionInfo"/>
+        </collection>
+    </resultMap>
 
-    <!--select t1.id as appInfoId,t1.app_info,t1.apk_name,t1.creation_date,t1.downloads,t1.interface_language,-->
-    <!--t1.logo_loc_path,t1.logo_pic_path,t1.logo_loc_path,t1.on_sale_date,-->
-    <!--t1.software_name,t1.software_size,t1.support_rom,t1.update_date,-->
-    <!--c1.id as level1Id,c2.id level2Id,c3.id level3Id,-->
-    <!--c1.category_name level1Name,c2.category_name level2Name,c3.creation_time level3Name,-->
-    <!--d1.value_id,d1.value_name,-->
-    <!--v1.id versionId,v1.version_no,-->
-    <!--u1.id createId,u1.dev_name createName,-->
-    <!--u2.id modifyId,u2.dev_name modifyName,-->
-    <!--u3.id devId,u3.dev_name devName-->
-    <!--from app_info t1 left join app_category c1 on t1.category_level1 = c1.id-->
-    <!--left join app_category c2 on t1.category_level2 = c2.id-->
-    <!--left join app_category c3 on t1.category_level3 = c3.id-->
-    <!--left join data_dictionary d1 on t1.status = d1.value_id-->
-    <!--left join app_version v1 on t1.version_id = v1.version_no-->
-    <!--left join dev_user u1 on t1.created_by = u1.id-->
-    <!--left join dev_user u2 on t1.modify_by = u2.id-->
-    <!--left join dev_user u3 on t1.dev_id = u3.id-->
-    <!--where-->
-    <!--d1.type_code = 'APP_STATUS'-->
-    <!--AND-->
-    <!--id = #{id}-->
     <resultMap id="appInfoDetail" type="com.ybq.pojo.AppInfo" extends="base">
         <!--平台信息-->
         <association property="flatform" javaType="com.ybq.pojo.DataDictionary">
@@ -345,14 +336,14 @@
         delete from app_info where id = #{id}
     </delete>
 
-    <select id="query" resultType="com.ybq.pojo.AppInfo">
-        SELECT t1.id appInfoId,t1.software_Name,t1.APK_Name,t1.software_Size,t1.downloads,
+    <select id="query" resultMap="appInfoDetail">
+        SELECT t1.id appInfoId,t1.software_name,t1.apk_name,t1.software_size,t1.downloads,
         t2.value_name AS flatform_name,
-        t6.value_Name AS app_status,
-        t3.category_Name AS category_level_one_name,
-        t4.category_Name AS category_level_two_name,
-        t5.category_Name AS category_level_three_name,
-        t1.version_Id,t7.version_No
+        t6.value_name AS app_status,
+        t3.category_name AS category_level_one_name,
+        t4.category_name AS category_level_two_name,
+        t5.category_name AS category_level_three_name,
+        t1.version_id,t7.version_No
         FROM app_info t1 LEFT JOIN data_dictionary t2 ON t1.flatform_Id = t2.value_id
         LEFT JOIN app_category t3 ON t1.category_Level1 = t3.id
         LEFT JOIN app_category t4 ON t1.category_Level2 = t4.id
@@ -363,7 +354,7 @@
         <where>
            t2.type_Code = 'APP_FLATFORM'
 
-           t6.type_Code = 'APP_STATUS'
+           and t6.type_Code = 'APP_STATUS'
 
             <if test="appFlatform != null and appFlatform != ''">
                 and t1.flatform_Id = #{appFlatform}
@@ -408,6 +399,36 @@
       left join dev_user u1 on t1.created_by = u1.id
       left join dev_user u2 on t1.modify_by = u2.id
       left join dev_user u3 on t1.dev_id = u3.id
+        where
+         d1.type_code = 'APP_STATUS'
+         AND
+        t1.id = #{id}
+    </select>
+    <select id="queryDetailById" resultMap="appDetailWithHistoryVersion">
+
+      select t1.id as appInfoId,t1.app_info,t1.apk_name,t1.creation_date,t1.downloads,t1.interface_language,
+      t1.logo_loc_path,t1.logo_pic_path,t1.logo_loc_path,t1.on_sale_date,
+      t1.software_name,t1.software_size,t1.support_rom,t1.update_date,
+      c1.id as level1Id,c2.id level2Id,c3.id level3Id,
+      c1.category_name level1Name,c2.category_name level2Name,c3.creation_time level3Name,
+      d1.value_id statusId,d1.value_name statusName,
+      d2.value_id flatformId,d2.value_name flatformName,
+      v1.id versionId,v1.version_no,
+      u1.id createId,u1.dev_name createName,
+      u2.id modifyId,u2.dev_name modifyName,
+      u3.id devId,u3.dev_name devName,
+      v2.id historyVersionId,v2.version_no historyVersionNo,v2.apk_filename historyApkFileName,v2.apkLoc_path historyApkLocPath,v2.download_link
+      historyDownloadLink,v2.version_size historyVersionSize,v2.version_info versionInfo
+        from app_info t1 left join app_category c1 on t1.category_level1 = c1.id
+        left join app_category c2 on t1.category_level2 = c2.id
+        left join app_category c3 on t1.category_level3 = c3.id
+        left join data_dictionary d1 on t1.status = d1.value_id
+        left join data_dictionary d2 on t1.flatform_id = d2.value_id
+        left join app_version v1 on t1.version_id = v1.version_no
+      left join dev_user u1 on t1.created_by = u1.id
+      left join dev_user u2 on t1.modify_by = u2.id
+      left join dev_user u3 on t1.dev_id = u3.id
+      left join app_version v2 on t1.id = v2.app_id
         where
          d1.type_code = 'APP_STATUS'
          AND
