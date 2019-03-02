@@ -7,4 +7,8 @@ import java.util.List;
 
 public interface DevUserMapper {
     List<DevUser> queryByNamePwd(DevUser dev_user);
+
+    Integer checkDevCode(@Param("devCode") String devCode);
+
+    int register(DevUser devUser);
 }

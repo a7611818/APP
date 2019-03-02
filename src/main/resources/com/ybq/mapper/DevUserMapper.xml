@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.ybq.mapper.DevUserMapper">
+    <insert id="register" parameterType="com.ybq.pojo.DevUser">
+        insert into dev_user (dev_code,dev_password,creation_date) values
+        (#{devCode},#{devPassword},#{creationDate})
+    </insert>
     <select id="queryByNamePwd" resultType="com.ybq.pojo.DevUser">
         select dev_name,id from dev_user
         <where>
@@ -12,5 +16,10 @@
             </if>
         </where>
     </select>
+    <select id="checkDevCode" resultType="_int">
+                select id from dev_user
+        where dev_code = #{devCode}
+    </select>
+
 
 </mapper>

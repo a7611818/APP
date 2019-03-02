@@ -105,12 +105,11 @@
 </head>
 <body onload="alertError()">
 <div id="container">
-    <div></div>
     <div class="admin-login-background">
         <!--<div class="admin-header">-->
         <!--<img src="image/ex_logo.png" class="admin-logo">-->
         <!--</div>-->
-        <form class="layui-form" action="${ctx}/dev/login" method="post">
+        <form class="layui-form" action="${ctx}/dev/register" method="post">
             <div>
                 <i class="layui-icon layui-icon-username admin-icon admin-icon-username"></i>
                 <input type="text" name="devCode" placeholder="请输入用户名"
@@ -119,8 +118,15 @@
             </div>
             <div>
                 <i class="layui-icon layui-icon-password admin-icon admin-icon-password"></i>
-                <input type="password" name="devPassword"
+                <input type="password" name="devPassword" id="pw"
                        placeholder="请输入密码"
+                       autocomplete="off"
+                       class="layui-input admin-input">
+            </div>
+            <div>
+                <i class="layui-icon layui-icon-password admin-icon admin-icon-password"></i>
+                <input type="password" name="devPasswordTwo" id="pwTwo"
+                       placeholder="请再次输入密码"
                        autocomplete="off"
                        class="layui-input admin-input">
             </div>
@@ -134,11 +140,9 @@
             </div>
             <a href="#" onclick="changeImg()"><img id="imgObj" alt="验证码" src="${ctx}/app/getCode"></a><br/>
 
-            <button class="layui-btn layui-btn-primary">登陆</button>
-
+            <button class="layui-btn layui-btn-normal" onclick="checkPw()">注册</button>
 
         </form>
-        <input type="button" class="layui-btn layui-btn-normal" value="注册" onclick="location.href='${ctx}/dev/toRegister'">
     </div>
 </div>
 <script src="layui/layui.js"></script>
@@ -152,7 +156,14 @@
         }
 
     }
-
+    function checkPw(){
+        var pw = document.getElementById('pw').value;
+        var pw2 = document.getElementById('pwTwo').value;
+        if (pw != pw2){
+            alert('密码不一致');
+            window.event.returnValue = false;
+        }
+    }
 
     function changeImg() {
         var imgSrc = $("#imgObj");

@@ -8,14 +8,25 @@ import com.ybq.pojo.DataDictionary;
 import com.ybq.pojo.DevUser;
 import com.ybq.service.AppCategoryService;
 import com.ybq.service.AppInfoService;
+import com.ybq.util.CodeUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.imageio.ImageIO;
+import javax.servlet.ServletException;
+import javax.servlet.ServletOutputStream;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.awt.image.RenderedImage;
+import java.io.IOException;
 import java.util.List;
+import java.util.Map;
 
 @Controller
 @RequestMapping("/app")
@@ -25,6 +36,41 @@ public class DevAppcontroller {
 
     @Autowired
     private AppCategoryService appCategoryService;
+
+    @RequestMapping("/toLogin")
+    public String toLogin(){
+        return "dev/login";
+    }
+
+    @RequestMapping(value = "/getCode", method = RequestMethod.GET)
+    public void captcha(HttpServletRequest req, HttpServletResponse resp)
+    {
+        // 调用工具类生成的验证码和验证码图片
+        Map<String, Object> codeMap = CodeUtil.generateCodeAndPic();
+
+        // 将四位数字的验证码保存到Session中。
+        HttpSession session = req.getSession();
+        session.setAttribute("code", codeMap.get("code").toString());
+
+        // 禁止图像缓存。
+        resp.setHeader("Pragma", "no-cache");
+        resp.setHeader("Cache-Control", "no-cache");
+        resp.setDateHeader("Expires", -1);
+
+        resp.setContentType("image/jpeg");
+
+        // 将图像输出到Servlet输出流中。
+        ServletOutputStream sos;
+        try {
+            sos = resp.getOutputStream();
+            ImageIO.write((RenderedImage) codeMap.get("codePic"), "jpeg", sos);
+            sos.close();
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+
+    }
 
 
     @RequestMapping("/index/{id}")
