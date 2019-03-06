@@ -38,13 +38,6 @@ public class AppCategory {
         this.id = id;
     }
 
-    public String getCategoryCode() {
-        return categoryCode;
-    }
-
-    public void setCategoryCode(String categoryCode) {
-        this.categoryCode = categoryCode == null ? null : categoryCode.trim();
-    }
 
     public String getCategoryName() {
         return categoryName;
@@ -94,18 +87,12 @@ public class AppCategory {
         this.modifyDate = modifyDate;
     }
 
-    @Override
-    public String toString() {
-        return "AppCategory{" +
-                "id=" + id +
-                ", categoryCode='" + categoryCode + '\'' +
-                ", categoryName='" + categoryName + '\'' +
-                ", parentId=" + parentId +
-                ", createdBy=" + createdBy +
-                ", creationTime=" + creationTime +
-                ", modifyBy=" + modifyBy +
-                ", modifyDate=" + modifyDate +
-                ", appInfos=" + appInfos +
-                '}';
+    public String getCategoryCode() {
+        return this.categoryCode;
     }
+
+    public void setCategoryCode(String categoryCode) {
+        this.categoryCode = categoryCode;
+    }
+
 }
